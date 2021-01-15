@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.SplashActivity">
+
+        <TextView
+            android:id="@+id/splash_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="75dp"
+            android:text="@string/beaux_visue"
+            android:textAppearance="@style/splash_title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/splash_subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/dimen_horizontal_spacing"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="@dimen/dimen_horizontal_spacing"
+            android:gravity="center_horizontal|top"
+            android:text="@string/splash_subtitle"
+            android:textAppearance="@style/splash_subtitle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/splash_title" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:src="@drawable/splash"
+            android:adjustViewBounds="true"
+            app:layout_constraintTop_toBottomOf="@id/splash_subtitle"
+            app:layout_constraintBottom_toTopOf="@id/splash_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/splash_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_horizontal_spacing"
+            android:layout_marginRight="@dimen/dimen_horizontal_spacing"
+            android:layout_marginBottom="75dp"
+            android:backgroundTint="#063360"
+            android:fontFamily="@font/poppins"
+            android:padding="16dp"
+            android:stateListAnimator="@null"
+            android:text="Gaskan Gaes!"
+            android:textAllCaps="false"
+            android:textColor="#F8F9FA"
+            android:textSize="24sp"
+            app:cornerRadius="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
